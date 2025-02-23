@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StackedWidget</class>
+ <widget class="QStackedWidget" name="StackedWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>742</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>742</width>
+    <height>504</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>742</width>
+    <height>504</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>StackedWidget</string>
+  </property>
+  <property name="currentIndex">
+   <number>2</number>
+  </property>
+  <widget class="QWidget" name="page_1">
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>0</y>
+      <width>371</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #a6a6a6; /* Lichtere versie van #4549a0 */
+}
+</string>
+    </property>
+    <widget class="QPushButton" name="verberg_page1">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border: none;  /* Verwijder de rand */
+    background-color: #4549a0;  /* Stel de achtergrondkleur in op #4549a0 */
+    color: white;  /* Zet de tekstkleur op wit voor de geselecteerde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QComboBox iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string>--</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="close_page1">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border: none;  /* Verwijder de rand */
+    background-color: #4549a0;  /* Stel de achtergrondkleur in op #4549a0 */
+    color: white;  /* Zet de tekstkleur op wit voor de geselecteerde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QComboBox iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>221</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Naam:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="naam_input">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>120</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    border: none;  /* Verwijder de rand */
+    background-color: #4549a0;  /* Stel de achtergrondkleur in op #4549a0 */
+    color: white;  /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}
+
+/* Stel de kleur van de placeholder-tekst in */
+QLineEdit::placeholder 
+</string>
+     </property>
+     <property name="text">
+      <string>Vul je naam in:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>221</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Thema:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="onderwerp_input">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>260</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    border: none;  /* Verwijder de rand */
+    background-color: #4549a0;  /* Stel de achtergrondkleur in op #4549a0 */
+    color: white;  /* Zet de tekstkleur op wit voor de geselecteerde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QComboBox iets ronder */
+    
+}
+
+/* Stel de kleur van de placeholder-tekst in */
+QComboBox::drop-down {
+    border: none;  /* Verwijder de rand van het dropdownmenu */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #4549a0;  /* Stel de achtergrondkleur in van de dropdownlijst */
+    color: white;  /* Zet de tekstkleur in de dropdownlijst op wit */
+}
+
+/* Als er een placeholder tekst is (bijvoorbeeld &quot;Kies een optie&quot;) */
+QComboBox::item {
+    color: #d3d3d3;  /* Lichte grijze kleur voor de niet-geselecteerde items in de lijst */
+}
+
+</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Keuze thema:</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>geschiedenis</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>sport</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>cultuur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>filosofie</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>360</y>
+       <width>161</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Moeilijkheid:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="moeilijkheid_input">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>420</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    border: none;  /* Verwijder de rand */
+    background-color: #4549a0;  /* Stel de achtergrondkleur in op #4549a0 */
+    color: white;  /* Zet de tekstkleur op wit voor de geselecteerde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QComboBox iets ronder */
+    
+}
+
+/* Stel de kleur van de placeholder-tekst in */
+QComboBox::drop-down {
+    border: none;  /* Verwijder de rand van het dropdownmenu */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #4549a0;  /* Stel de achtergrondkleur in van de dropdownlijst */
+    color: white;  /* Zet de tekstkleur in de dropdownlijst op wit */
+}
+
+/* Als er een placeholder tekst is (bijvoorbeeld &quot;Kies een optie&quot;) */
+QComboBox::item {
+    color: #d3d3d3;  /* Lichte grijze kleur voor de niet-geselecteerde items in de lijst */
+}
+
+</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Keuze niveau:</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>gevorderd</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>medium</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>beginner</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>360</y>
+       <width>161</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Aantal vragen:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>361</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: #FDF5E6; /* Maakt de QLabel een dikke zwarte balk */
+    min-height: 5px; /* Dikte van de lijn */
+    max-height: 5px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>361</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: #FDF5E6; /* Maakt de QLabel een dikke zwarte balk */
+    min-height: 5px; /* Dikte van de lijn */
+    max-height: 5px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>361</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: #FDF5E6; /* Maakt de QLabel een dikke zwarte balk */
+    min-height: 5px; /* Dikte van de lijn */
+    max-height: 5px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>430</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    border: 2px solid #a9a9a9;  /* Dunne klassieke rand */
+    background-color: #FDF5E6;  /* Zelfde achtergrondkleur */
+    color: #4549a0;  /* Zelfde tekstkleur */
+    padding: 5px 10px;  /* Extra padding voor een luchtiger gevoel */
+    border-radius: 5px;  /* Afgeronde hoeken */
+    
+    
+    text-align: center;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>200</y>
+       <width>131</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Willekeurig:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="willeukerig">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>270</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>verberg_page1</zorder>
+    <zorder>close_page1</zorder>
+    <zorder>label</zorder>
+    <zorder>naam_input</zorder>
+    <zorder>label_2</zorder>
+    <zorder>onderwerp_input</zorder>
+    <zorder>label_3</zorder>
+    <zorder>moeilijkheid_input</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_6</zorder>
+    <zorder>label_8</zorder>
+    <zorder>comboBox</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_7</zorder>
+    <zorder>willeukerig</zorder>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>381</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-image: url('C:/Users/Iyada/Pictures/download.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+}
+</string>
+    </property>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>351</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-image: url('C:/Users/Iyada/Pictures/simple_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;  /* Zorgt ervoor dat de afbeelding volledig zichtbaar is zonder vergroting */
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start_quiz2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>250</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border: none;  /* Geen rand */
+    background-color: transparent; /* Transparante achtergrond */
+    background-image: url(&quot;C:/Users/Iyada/Pictures/pushbutton_app.jpg&quot;); /* Afbeelding */
+    background-repeat: no-repeat; /* Voorkomt herhaling */
+    background-position: center; /* Centreert de afbeelding */
+    background-size: contain; /* Past afbeelding aan zonder te vervormen */
+    border-radius: 20px; /* Afgeronde hoeken */
+    padding: 10px; /* Extra ruimte rondom tekst */
+    font-size: 16px; /* Tekstgrootte */
+    font-weight: bold;
+    color: white; /* Tekstkleur */
+}
+
+QPushButton:hover {
+    opacity: 0.8; /* Iets transparanter bij hover */
+}
+
+QPushButton:pressed {
+    background-color: rgba(0, 0, 0, 0.2); /* Donkere overlay bij klikken */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="page_2">
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>741</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: black;  /* Lichtere versie van #4549a0 */
+}
+</string>
+    </property>
+    <widget class="QWidget" name="widget_5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>24</y>
+       <width>231</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-image: url(&quot;C:/Users/Iyada/Pictures/quizlerapp_smalllogo.jpg&quot;);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;  /* Zorgt ervoor dat de afbeelding volledig zichtbaar is zonder vervorming */
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="verberg_page2">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>--</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="close_page2">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>210</y>
+       <width>741</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: #a6a6a6; /* Maakt de QLabel een dikke zwarte balk */
+    min-height: 5px; /* Dikte van de lijn */
+    max-height: 5px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="next_vraag">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>107</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border: none;  /* Geen rand */
+    background-color: transparent; /* Transparante achtergrond */
+    background-image: url(&quot;C:/Users/Iyada/Pictures/pushbutton_app.jpg&quot;); /* Afbeelding */
+    background-repeat: no-repeat; /* Voorkomt herhaling */
+    background-position: center; /* Centreert de afbeelding */
+    background-size: contain; /* Past afbeelding aan zonder te vervormen */
+    border-radius: 20px; /* Afgeronde hoeken */
+    padding: 10px; /* Extra ruimte rondom tekst */
+    font-size: 16px; /* Tekstgrootte */
+    font-weight: bold;
+    color: white; /* Tekstkleur */
+}
+
+QPushButton:hover {
+    opacity: 0.8; /* Iets transparanter bij hover */
+}
+
+QPushButton:pressed {
+    background-color: rgba(0, 0, 0, 0.2); /* Donkere overlay bij klikken */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>200</y>
+       <width>741</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background-color: #a6a6a6; /* Maakt de QLabel een dikke zwarte balk */
+    min-height: 5px; /* Dikte van de lijn */
+    max-height: 5px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_6" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>741</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+
+</string>
+    </property>
+    <widget class="QLabel" name="vraag_input">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>681</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;  /* Verwijder de rand */
+
+    color: white; /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="optie_input">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>681</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QListWidget {
+    border: none;  /* Verwijder de rand */
+
+    color: black;  /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <zorder>widget_6</zorder>
+   <zorder>widget_4</zorder>
+  </widget>
+  <widget class="QWidget" name="page_3">
+   <widget class="QWidget" name="widget_7" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>741</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: black;  /* Lichtere versie van #4549a0 */
+}
+</string>
+    </property>
+    <widget class="QPushButton" name="verberg_page3">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>--</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="close_page3">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_8" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-7</x>
+       <y>10</y>
+       <width>241</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-image: url(&quot;C:/Users/Iyada/Documents/quizapp_iyad/files/images/scoreboard_quizapp.jpg&quot;);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond vult */
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="feedback_button">
+     <property name="geometry">
+      <rect>
+       <x>568</x>
+       <y>98</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-image: url(&quot;C:/Users/Iyada/Pictures/feedback_logo.jpg&quot;);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond vult */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="herstart_quiz">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>108</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border: none;  /* Geen rand */
+    background-color: transparent; /* Transparante achtergrond */
+    background-image: url(&quot;C:/Users/Iyada/Pictures/pushbutton_app.jpg&quot;); /* Afbeelding */
+    background-repeat: no-repeat; /* Voorkomt herhaling */
+    background-position: center; /* Centreert de afbeelding */
+    background-size: contain; /* Past afbeelding aan zonder te vervormen */
+    border-radius: 20px; /* Afgeronde hoeken */
+    padding: 10px; /* Extra ruimte rondom tekst */
+    font-size: 16px; /* Tekstgrootte */
+    font-weight: bold;
+    color: white; /* Tekstkleur */
+}
+
+QPushButton:hover {
+    opacity: 0.8; /* Iets transparanter bij hover */
+}
+
+QPushButton:pressed {
+    background-color: rgba(0, 0, 0, 0.2); /* Donkere overlay bij klikken */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_10" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>210</y>
+      <width>741</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>RuneScape UF</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+}
+</string>
+    </property>
+    <widget class="QLabel" name="score_gebruiker">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>50</y>
+       <width>291</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;  /* Verwijder de rand */
+
+    color: white;  /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>10</y>
+       <width>41</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>26</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #d4a017; /* Donkerder goud, pixelachtig */
+    
+    
+}
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>58</y>
+       <width>41</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>26</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #a6a6a6; /* Oudere zilverkleur, meer pixelstijl */
+    
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>110</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>26</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLabel {
+    color: #b87333; /* Oudere bronskleur */
+    
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="topscore_1">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>20</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #d4a017; /* Donkerder goud, pixelachtig */
+    
+    
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="topscore_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #a6a6a6; /* Oudere zilverkleur, meer pixelstijl */
+    
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="topscore_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>117</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLabel {
+    color: #b87333; /* Oudere bronskleur */
+    
+
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>371</x>
+       <y>15</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;  /* Verwijder de rand */
+
+    color: white;  /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string>Jouw score:</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="page">
+   <widget class="QWidget" name="widget_11" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>741</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: black;  /* Lichtere versie van #4549a0 */
+}
+</string>
+    </property>
+    <widget class="QPushButton" name="verberg_page4">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>--</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="close_page4">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_12" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-29</x>
+       <y>10</y>
+       <width>351</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-image: url(&quot;C:/Users/Iyada/Documents/quizapp_iyad/files/images/feedback_logo.png&quot;);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond vult */
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_13" native="true">
+     <property name="geometry">
+      <rect>
+       <x>321</x>
+       <y>4</y>
+       <width>121</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+    background-image: url(&quot;C:/Users/Iyada/Pictures/Macintosh Games - RetroWeb Vintage Computer Museum.jpg&quot;);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond vult */
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="feedback_button_2">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>100</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-image: url(&quot;C:/Users/Iyada/Pictures/feedback_logo.jpg&quot;);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond vult */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_14" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>210</y>
+      <width>741</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #6a6db6;  /* Lichtere versie van #4549a0 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+}
+</string>
+    </property>
+    <widget class="QLabel" name="foute_vraag">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>721</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;  /* Verwijder de rand */
+
+    color: white; /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="juiste_antwoord">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>721</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>RuneScape UF</family>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    border: none;  /* Verwijder de rand */
+
+    color: black; /* Zet de tekstkleur op wit voor de ingevulde tekst */
+    padding: 5px;  /* Voeg wat padding toe voor de tekst */
+    border-radius: 5px;  /* Maak de hoeken van de QLineEdit iets ronder */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
