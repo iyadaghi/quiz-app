@@ -1,7 +1,7 @@
 import sqlite3
 
 # Verbinden met de database
-conn = sqlite3.connect('quiz_vragen_3.db')
+conn = sqlite3.connect('quiz_vragen_5.db')
 cursor = conn.cursor()
 
 cursor.execute(''' 
@@ -35,15 +35,6 @@ CREATE TABLE IF NOT EXISTS quiz_statistieken (
     FOREIGN KEY (vraag_id) REFERENCES quiz_vragen(vraag_id),
     UNIQUE (gebruiker_id, vraag_id)
 
-);
-''')
-
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS antwoord_statistieken (
-    vraag_id INTEGER PRIMARY KEY,
-    totaal_keren_juist INTEGER DEFAULT 0,
-    totaal_keren_fout INTEGER DEFAULT 0,
-    FOREIGN KEY (vraag_id) REFERENCES quiz_vragen(vraag_id)
 );
 ''')
 
@@ -181,11 +172,6 @@ VALUES (?, ?, ?, ?, ?)
     ("Welke schrijver ontwikkelde de existentialistische filosofie in zijn werk 'Zijn en Niets'?", "Jean-Paul Sartre", '["Jean-Paul Sartre", "Simone de Beauvoir", "Maurice Merleau-Ponty"]', "cultuur", "gevorderd")
 ))
 
-#dit moet als laatste uitgevoerd worden zodat alle vraag ids worden toegevoegd
-cursor.execute('''
-        INSERT OR IGNORE INTO antwoord_statistieken (vraag_id)
-        SELECT vraag_id FROM quiz_vragen
-    ''')
 
 
 conn.commit()

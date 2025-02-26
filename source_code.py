@@ -34,9 +34,6 @@ class Database:
         return self.cursor.fetchall()
 
     def vraag_id_verzamelen(self, naam, juiste_vraag_id, foute_vraag_id):
-        #statistieken voor juiste en foute antwoorden op te slaan
-        #zoek bestaande gebruiker of maak nieuwe aan
-        #foute_vraag_id en juiste_vraag_id komen van de interface class en vragen_laden_frontend methode
         naam = naam.strip()
         self.cursor.execute('SELECT gebruiker_id FROM personen_info WHERE LOWER(naam) = LOWER(?)', (naam,))
         gebruiker = self.cursor.fetchone()
@@ -67,7 +64,7 @@ class Database:
 
         self.conn.commit()
 
-    def score_berekenen(self, naam, score):
+    def score_injecteren(self, naam, score):
         # Controleer of de gebruiker al bestaat
         self.cursor.execute('SELECT 1 FROM personen_info WHERE naam = ?', (naam,))
         if self.cursor.fetchone():
@@ -81,35 +78,6 @@ class Database:
     def top_score(self):
         self.cursor.execute('SELECT naam, score FROM personen_info ORDER BY score DESC LIMIT 3')
         return self.cursor.fetchall()
-    #om de top 3 scores op te halen van de database
-
-    def update_antwoord_statistieken(self):
-        # voer de query uit om antwoord_statistieken bij te werken
-        self.cursor.execute('''
-            UPDATE antwoord_statistieken
-            SET totaal_keren_juist = (
-                SELECT COUNT(*) 
-                FROM quiz_statistieken 
-                WHERE quiz_statistieken.vraag_id = antwoord_statistieken.vraag_id 
-                AND quiz_statistieken.aantal_keren_juist > 0
-            ),
-            totaal_keren_fout = (
-                SELECT COUNT(*) 
-                FROM quiz_statistieken 
-                WHERE quiz_statistieken.vraag_id = antwoord_statistieken.vraag_id 
-                AND quiz_statistieken.aantal_keren_fout > 0
-            )
-            WHERE EXISTS (
-                SELECT 1
-                FROM quiz_statistieken 
-                WHERE quiz_statistieken.vraag_id = antwoord_statistieken.vraag_id
-            );
-        ''')
-        self.conn.commit()
-        #subqueries gebruikt
-
-    def close(self):
-        self.conn.close()
 
 # Spelersklasse
 class Speler:
@@ -159,7 +127,7 @@ class Interface(QMainWindow):
         self.stacked_widget = QStackedWidget()
         self.ui.setupUi(self.stacked_widget)
         self.setCentralWidget(self.stacked_widget)
-        self.database = Database('quiz_vragen_3.db')
+        self.database = Database('quiz_vragen_5.db')
         self.speler = None
         self.quiz_vragen = None
         self.dragging = False
@@ -301,14 +269,12 @@ class Interface(QMainWindow):
         # het geeft een score op 10, gebaseerd op het percentage correcte antwoorden
 
     def toon_score(self):
-        #toon score en werk statistieken bij
-        self.database.update_antwoord_statistieken()
         score = self.bereken_score()
-        self.score_gebruiker_label.setText(str(score))
+        self.score_gebruiker_label.setText(str(score * 10) + "%")
         return str(score)
 
     def inject_score(self, naam, score):
-        self.database.score_berekenen(naam, score)
+        self.database.score_injecteren(naam, score)
 
     def toon_top_scores(self):
         topscores = self.database.top_score()
