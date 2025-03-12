@@ -1,15 +1,15 @@
 import sqlite3
 
 # Verbinden met de database
-conn = sqlite3.connect('quiz_vragen_5.db')
+conn = sqlite3.connect('quiz_vragen.db')
 cursor = conn.cursor()
 
 cursor.execute(''' 
 
 CREATE TABLE IF NOT EXISTS personen_info (
     gebruiker_id INTEGER PRIMARY KEY,
-    naam VARCHAR(255),
-    score DECIMAL(3,2)
+    naam VARCHAR(255) NOT NULL,
+    score DECIMAL(2)
 )
 ''')
 
@@ -17,7 +17,7 @@ cursor.execute('''
 CREATE TABLE IF NOT EXISTS quiz_vragen (
     vraag_id INTEGER PRIMARY KEY,
     vraag varchar(255) NOT NULL,
-    antwoord TEXT NOT NULL,
+    antwoord varchar(255) NOT NULL,
     opties JSON,
     onderwerp VARCHAR(25),
     moeilijkheid VARCHAR(25)
@@ -130,7 +130,7 @@ VALUES (?, ?, ?, ?, ?)
     ("Wie won de FIFA Wereldbeker 2018?", "Frankrijk", '["Frankrijk", "Brazilië", "Duitsland"]', "sport", "medium"),
     ("Welke sporter heeft de meeste overwinningen in de Tour de France?", "Lance Armstrong", '["Lance Armstrong", "Eddy Merckx", "Miguel Indurain"]', "sport", "medium"),
     ("Wie is de snelste man ooit op de 100 meter?", "Usain Bolt", '["Usain Bolt", "Tyson Gay", "Asafa Powell"]', "sport", "medium"),
-    ("Wie schilderde de beroemde 'Guernica', een kunstwerk over de Spaanse Burgeroorlog?", "Pablo Picasso", '["Pablo Picasso", "Salvador Dalí", "Henri Matisse"]', "sport", "gevorderd"),
+    ("Wie schilderde de beroemde 'Guernica', een kunstwerk over de Spaanse Burgeroorlog?", "Pablo Picasso", '["Pablo Picasso", "Salvador Dalí", "Henri Matisse"]', "cultuur", "gevorderd"),
     ("Wie won de Olympische gouden medaille op de 200 meter in 2008?", "Usain Bolt", '["Usain Bolt", "Michael Johnson", "Frank Fredericks"]', "sport", "gevorderd"),
     ("Wie heeft de meeste Formule 1-races gewonnen?", "Lewis Hamilton", '["Lewis Hamilton", "Michael Schumacher", "Ayrton Senna"]', "sport", "gevorderd"),
     ("Welke sporter heeft het meeste aantal Wimbledon-titels behaald?", "Roger Federer", '["Roger Federer", "Pete Sampras", "Björn Borg"]', "sport", "gevorderd"),
@@ -140,6 +140,7 @@ VALUES (?, ?, ?, ?, ?)
     ("Wie is de oudste Formule 1-kampioen?", "Luigi Fagioli", '["Luigi Fagioli", "Juan Manuel Fangio", "Alain Prost"]', "sport", "gevorderd"),
     ("Wie was de eerste vrouwelijke sporter die een gouden medaille won op de Olympische Spelen?", "Hélène de Pourtalès", '["Hélène de Pourtalès", "Charlotte Cooper", "Stella Walsh"]', "sport", "gevorderd"),
     ("In welk jaar won Nederland de eerste Europese Voetbalkampioenschap?", "1988", '["1988", "1974", "1992"]', "sport", "gevorderd"),
+    ("Wie won de wereldcup in Zuid-Afrika?", "spanje", '["duitsland","Engeland", "België"]', "sport", "gevorderd"),
     ("Wat is de naam van de beroemdste Japanse filmregisseur?", "Akira Kurosawa", '["Akira Kurosawa", "Hayao Miyazaki", "Yasujiro Ozu"]', "cultuur", "beginner"),
     ("Wat is de naam van de beroemde toren in Parijs?", "Eiffeltoren", '["Eiffeltoren", "Big Ben", "Vrijheidsbeeld"]', "cultuur", "beginner"),
     ("Welke beroemde Nederlandse kunstenaar schilderde 'De Sterrennacht'?", "Vincent van Gogh", '["Vincent van Gogh", "Rembrandt", "Johannes Vermeer"]', "cultuur", "beginner"),
